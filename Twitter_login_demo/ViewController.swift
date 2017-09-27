@@ -1,4 +1,4 @@
-//
+//    https://api.twitter.com/oauth/access_token//
 //  ViewController.swift
 //  Twitter_login_demo
 //
@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import BDBOAuth1Manager
 
 class ViewController: UIViewController {
 
@@ -20,6 +21,18 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    @IBAction func OnLoginButton(_ sender: Any) {
+        print("asd")
+        let twitterClient = BDBOAuth1SessionManager(baseURL: URL(string: "https://api.twitter.com"), consumerKey: "pPWSqAYRw8ZzEUxU1oLCnzv04", consumerSecret: "2lv9eClYqFRq6sWWv88b8s7JltwiNYDZWhwyRERFtypyFdPSXz")
+        twitterClient?.deauthorize()
+        twitterClient?.fetchRequestToken(withPath: "oauth/request_token", method: "GET", callbackURL: URL(string: "mytwitterdemo://oauth"), scope: nil, success: {(requestToken: BDBOAuth1Credential!) -> Void in
+            print("I got a token \(requestToken.token)")
+            let url = URL(string: "https://api.twitter.com/oauth/authorize?oauth_token=\(requestToken.token!)")
+            UIApplication.shared.openURL(url!)
+        }, failure: {(error: Error!) -> Void in
+            print("error: \(error.localizedDescription)")
+        })
+    }
+    
 }
 
