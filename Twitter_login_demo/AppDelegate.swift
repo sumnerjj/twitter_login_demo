@@ -49,6 +49,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let twitterClient = BDBOAuth1SessionManager(baseURL: URL(string: "https://api.twitter.com"), consumerKey: "pPWSqAYRw8ZzEUxU1oLCnzv04", consumerSecret: "2lv9eClYqFRq6sWWv88b8s7JltwiNYDZWhwyRERFtypyFdPSXz")
         twitterClient?.fetchAccessToken(withPath: "https://api.twitter.com/oauth/access_token", method: "POST", requestToken: requestToken, success: {(accessToken: BDBOAuth1Credential!) -> Void in
             print("I got access token")
+            twitterClient?.get("account/verify_credentials", parameters: nil, success: { (task: URLSessionDataTask, response: Any?) -> Void in
+                print("account: \(response)")
+            }, failure: nil)
         }, failure: {(error: Error!) -> Void in
             print("error qwe")
         })
