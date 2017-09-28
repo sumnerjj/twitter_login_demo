@@ -49,12 +49,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let twitterClient = BDBOAuth1SessionManager(baseURL: URL(string: "https://api.twitter.com"), consumerKey: "pPWSqAYRw8ZzEUxU1oLCnzv04", consumerSecret: "2lv9eClYqFRq6sWWv88b8s7JltwiNYDZWhwyRERFtypyFdPSXz")
         twitterClient?.fetchAccessToken(withPath: "https://api.twitter.com/oauth/access_token", method: "POST", requestToken: requestToken, success: {(accessToken: BDBOAuth1Credential!) -> Void in
             print("I got access token")
-            twitterClient?.get("account/verify_credentials", parameters: nil, success: { (task: URLSessionDataTask, response: Any?) -> Void in
+            
+            twitterClient?.get("1.1/account/verify_credentials.json", parameters: nil, success: { (task: URLSessionDataTask, response: Any?) -> Void in
                 print("account: \(response)")
             }, failure: nil)
+            
+            twitterClient?.get("1.1/statuses/home_timeline.json", parameters: nil, success: { (task: URLSessionDataTask, response: Any?) -> Void in
+                let tweets = response as! [Dictionary<String, Any>]
+                for tweet in tweets {
+                    print("tweet: \(tweet["text"]!)")
+                }
+            }, failure: nil)
+            
         }, failure: {(error: Error!) -> Void in
             print("error qwe")
         })
+        
+        
+        
         return true
     }
 
