@@ -46,23 +46,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print(url.description)
         
         let requestToken = BDBOAuth1Credential(queryString: url.query)
-        let twitterClient = BDBOAuth1SessionManager(baseURL: URL(string: "https://api.twitter.com"), consumerKey: "pPWSqAYRw8ZzEUxU1oLCnzv04", consumerSecret: "2lv9eClYqFRq6sWWv88b8s7JltwiNYDZWhwyRERFtypyFdPSXz")
-        twitterClient?.fetchAccessToken(withPath: "https://api.twitter.com/oauth/access_token", method: "POST", requestToken: requestToken, success: {(accessToken: BDBOAuth1Credential!) -> Void in
+        let client = TwitterClient.sharedInstance
+
+        client?.fetchAccessToken(withPath: "https://api.twitter.com/oauth/access_token", method: "POST", requestToken: requestToken, success: {(accessToken: BDBOAuth1Credential!) -> Void in
             print("I got access token")
             
-            twitterClient?.get("1.1/account/verify_credentials.json", parameters: nil, success: { (task: URLSessionDataTask, response: Any?) -> Void in
-                let userDictionary = response as! NSDictionary
-                let user = User(dictionary: userDictionary)
-                print("asd name: \(user.name)")
-            }, failure: nil)
+            client?.currentAccount()
             
-            twitterClient?.get("1.1/statuses/home_timeline.json", parameters: nil, success: { (task: URLSessionDataTask, response: Any?) -> Void in
-                let dictionaries = response as! [NSDictionary]
-                let tweets = Tweet.tweetsWithArray(dictionaries: dictionaries)
+            client?.homeTimeline(success: { (tweets: [Tweet]) in
                 for tweet in tweets {
-                    print("tweet: \(tweet.text!)")
+                    print("asd \(tweet.text)")
                 }
-            }, failure: nil)
+            }, failure: { (error: Error) in
+                print(error.localizedDescription)
+            })
+            
+            
             
         }, failure: {(error: Error!) -> Void in
             print("error qwe")
