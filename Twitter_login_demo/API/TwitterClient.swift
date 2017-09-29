@@ -12,7 +12,13 @@ import BDBOAuth1Manager
 class TwitterClient: BDBOAuth1SessionManager {
     
     static let sharedInstance = TwitterClient(baseURL: URL(string: "https://api.twitter.com"), consumerKey: "pPWSqAYRw8ZzEUxU1oLCnzv04", consumerSecret: "2lv9eClYqFRq6sWWv88b8s7JltwiNYDZWhwyRERFtypyFdPSXz")
-    func login(success: () -> (), failure: (Error) -> ()) {
+    
+    var loginSuccess: (() -> ())?
+    var loginFailure: ((Error) -> ())?
+    
+    func login(success: @escaping () -> (), failure: @escaping (Error) -> ()) {
+        loginSuccess = success
+        loginFailure = failure
         
         print("asd")
         TwitterClient.sharedInstance?.deauthorize()
@@ -22,9 +28,34 @@ class TwitterClient: BDBOAuth1SessionManager {
             UIApplication.shared.openURL(url!)
         }, failure: {(error: Error!) -> Void in
             print("error: \(error.localizedDescription)")
+            self.loginFailure?(error)
         })
         
     }
+    
+    func handleOpenUrl(url: URL) {
+        let requestToken = BDBOAuth1Credential(queryString: url.query)
+        fetchAccessToken(withPath: "https://api.twitter.com/oauth/access_token", method: "POST", requestToken: requestToken, success: {(accessToken: BDBOAuth1Credential!) -> Void in
+            print("I got access token")
+            
+            self.loginSuccess?()
+            
+            /*client?.currentAccount()
+            
+            client?.homeTimeline(success: { (tweets: [Tweet]) in
+                for tweet in tweets {
+                    print("asd \(tweet.text)")
+                }
+            }, failure: { (error: Error) in
+                print(error.localizedDescription)
+            }) */
+
+        }, failure: {(error: Error!) -> Void in
+            print("error qwe")
+            self.loginFailure?(error)
+        })
+    }
+    
     func homeTimeline(success: @escaping ([Tweet]) -> (), failure: @escaping (Error) -> () ){
 
         

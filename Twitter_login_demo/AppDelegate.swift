@@ -45,30 +45,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
         print(url.description)
         
-        let requestToken = BDBOAuth1Credential(queryString: url.query)
+        
         let client = TwitterClient.sharedInstance
+        client?.handleOpenUrl(url: url)
 
-        client?.fetchAccessToken(withPath: "https://api.twitter.com/oauth/access_token", method: "POST", requestToken: requestToken, success: {(accessToken: BDBOAuth1Credential!) -> Void in
-            print("I got access token")
-            
-            client?.currentAccount()
-            
-            client?.homeTimeline(success: { (tweets: [Tweet]) in
-                for tweet in tweets {
-                    print("asd \(tweet.text)")
-                }
-            }, failure: { (error: Error) in
-                print(error.localizedDescription)
-            })
-            
-            
-            
-        }, failure: {(error: Error!) -> Void in
-            print("error qwe")
-        })
-        
-        
-        
         return true
     }
 
