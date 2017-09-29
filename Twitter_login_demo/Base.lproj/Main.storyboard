@@ -67,14 +67,19 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="101.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wpg-y2-BKg">
-                                                    <rect key="frame" x="8" y="40" width="42" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wpg-y2-BKg">
+                                                    <rect key="frame" x="8" y="8" width="359" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Wpg-y2-BKg" secondAttribute="bottom" constant="8" id="AYe-Xm-8oy"/>
+                                                <constraint firstItem="Wpg-y2-BKg" firstAttribute="top" secondItem="hPf-At-GEE" secondAttribute="top" constant="8" id="F4f-vC-wg0"/>
+                                                <constraint firstItem="Wpg-y2-BKg" firstAttribute="leading" secondItem="hPf-At-GEE" secondAttribute="leading" constant="8" id="GHk-d3-Vry"/>
+                                                <constraint firstAttribute="trailing" secondItem="Wpg-y2-BKg" secondAttribute="trailing" constant="8" id="Uvj-zD-fSE"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="tweetLabel" destination="Wpg-y2-BKg" id="WNO-Ug-aYi"/>
