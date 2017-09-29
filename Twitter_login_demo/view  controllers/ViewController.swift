@@ -24,7 +24,7 @@ class ViewController: UIViewController {
     @IBAction func OnLoginButton(_ sender: Any) {
         let client = TwitterClient.sharedInstance
         client?.login(success: { () -> () in
-            print("qwe success")
+            print("logged in success")
         }, failure: { (error: Error) -> () in
             print("Error: \(error.localizedDescription)")
         })
