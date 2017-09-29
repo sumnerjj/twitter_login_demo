@@ -12,7 +12,19 @@ import BDBOAuth1Manager
 class TwitterClient: BDBOAuth1SessionManager {
     
     static let sharedInstance = TwitterClient(baseURL: URL(string: "https://api.twitter.com"), consumerKey: "pPWSqAYRw8ZzEUxU1oLCnzv04", consumerSecret: "2lv9eClYqFRq6sWWv88b8s7JltwiNYDZWhwyRERFtypyFdPSXz")
-    
+    func login(success: () -> (), failure: (Error) -> ()) {
+        
+        print("asd")
+        TwitterClient.sharedInstance?.deauthorize()
+        TwitterClient.sharedInstance?.fetchRequestToken(withPath: "oauth/request_token", method: "GET", callbackURL: URL(string: "mytwitterdemo://oauth"), scope: nil, success: {(requestToken: BDBOAuth1Credential!) -> Void in
+            print("I got a token \(requestToken.token)")
+            let url = URL(string: "https://api.twitter.com/oauth/authorize?oauth_token=\(requestToken.token!)")
+            UIApplication.shared.openURL(url!)
+        }, failure: {(error: Error!) -> Void in
+            print("error: \(error.localizedDescription)")
+        })
+        
+    }
     func homeTimeline(success: @escaping ([Tweet]) -> (), failure: @escaping (Error) -> () ){
 
         
