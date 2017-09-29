@@ -110,10 +110,10 @@
             </objects>
             <point key="canvasLocation" x="1856.8" y="117.39130434782609"/>
         </scene>
-        <!--View Controller-->
+        <!--Compose View Controller-->
         <scene sceneID="xCF-oh-xLY">
             <objects>
-                <viewController id="h0w-Wf-jqB" sceneMemberID="viewController">
+                <viewController id="h0w-Wf-jqB" customClass="ComposeViewController" customModule="Twitter_login_demo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Lie-u0-eBh"/>
                         <viewControllerLayoutGuide type="bottom" id="fXk-dC-xm0"/>
@@ -122,11 +122,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4EN-DY-uJF">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" text="Lorem ipsum dolor" translatesAutoresizingMaskIntoConstraints="NO" id="4EN-DY-uJF">
                                 <rect key="frame" x="67" y="92" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -134,8 +133,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="3yD-Eq-Qho">
-                        <barButtonItem key="rightBarButtonItem" title="Tweet" id="s4N-1I-RwN"/>
+                        <barButtonItem key="rightBarButtonItem" title="Tweet" id="s4N-1I-RwN">
+                            <connections>
+                                <action selector="onSendButton:" destination="h0w-Wf-jqB" id="rbe-wc-D6b"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="composeTextView" destination="4EN-DY-uJF" id="bIB-F8-VX2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vs4-GC-HUc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
