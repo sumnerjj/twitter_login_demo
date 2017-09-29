@@ -96,6 +96,11 @@
                                 <action selector="onLogoutButton:" destination="o0a-yA-fcL" id="9HS-ms-6k2"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Compose" id="pNM-6X-yyA">
+                            <connections>
+                                <segue destination="h0w-Wf-jqB" kind="presentation" id="bCL-qo-Jcw"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="hzZ-yQ-eO9" id="TbP-xh-9rh"/>
@@ -104,6 +109,33 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TgT-Bt-tuU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1856.8" y="117.39130434782609"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="xCF-oh-xLY">
+            <objects>
+                <viewController id="h0w-Wf-jqB" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Lie-u0-eBh"/>
+                        <viewControllerLayoutGuide type="bottom" id="fXk-dC-xm0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="X6v-lU-eKR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="compose" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="evU-cu-Uvu">
+                                <rect key="frame" x="146" y="230" width="71" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vs4-GC-HUc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2671" y="118"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZLP-5N-K2G">
