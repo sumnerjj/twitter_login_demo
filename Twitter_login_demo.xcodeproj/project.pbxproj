@@ -17,6 +17,7 @@
 		C17C60171F7DA89F00C2CAD6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17C60161F7DA89F00C2CAD6 /* User.swift */; };
 		C17C60191F7DA8AA00C2CAD6 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17C60181F7DA8AA00C2CAD6 /* Tweet.swift */; };
 		C17C601B1F7DB30700C2CAD6 /* TwitterClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C17C601A1F7DB30700C2CAD6 /* TwitterClient.swift */; };
+		C1982E831F7ED0450091AC46 /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1982E821F7ED0450091AC46 /* TweetCell.swift */; };
 		D064386B1F7E019900BD0645 /* TweetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D064386A1F7E019900BD0645 /* TweetsViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		C17C60161F7DA89F00C2CAD6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C17C60181F7DA8AA00C2CAD6 /* Tweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
 		C17C601A1F7DB30700C2CAD6 /* TwitterClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterClient.swift; sourceTree = "<group>"; };
+		C1982E821F7ED0450091AC46 /* TweetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
 		D064386A1F7E019900BD0645 /* TweetsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,6 +90,7 @@
 		C15872111F7B11DE0048001E /* Twitter_login_demo */ = {
 			isa = PBXGroup;
 			children = (
+				C1982E7F1F7ECC200091AC46 /* Views */,
 				C158D5871F7DA80B006756B5 /* API */,
 				C158D5861F7DA7F4006756B5 /* view  controllers */,
 				C158D5851F7DA7E9006756B5 /* models */,
@@ -125,6 +128,14 @@
 				C17C601A1F7DB30700C2CAD6 /* TwitterClient.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		C1982E7F1F7ECC200091AC46 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C1982E821F7ED0450091AC46 /* TweetCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +272,7 @@
 				C17C60171F7DA89F00C2CAD6 /* User.swift in Sources */,
 				C17C60191F7DA8AA00C2CAD6 /* Tweet.swift in Sources */,
 				C15872251F7B15A40048001E /* LoginViewController.swift in Sources */,
+				C1982E831F7ED0450091AC46 /* TweetCell.swift in Sources */,
 				C15872151F7B11DE0048001E /* ViewController.swift in Sources */,
 				D064386B1F7E019900BD0645 /* TweetsViewController.swift in Sources */,
 				C17C601B1F7DB30700C2CAD6 /* TwitterClient.swift in Sources */,
