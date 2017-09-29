@@ -98,7 +98,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Compose" id="pNM-6X-yyA">
                             <connections>
-                                <segue destination="h0w-Wf-jqB" kind="presentation" id="bCL-qo-Jcw"/>
+                                <segue destination="h0w-Wf-jqB" kind="push" id="zV6-Wh-pC5"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -132,6 +132,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="3yD-Eq-Qho"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vs4-GC-HUc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
