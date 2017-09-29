@@ -55,15 +55,12 @@ class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         return cell
     }
     
-    /*func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TweetCell", for: indexPath) as! TweetCell
-        let tweet = tweets![indexPath.row]
-        //cell.tweetLabel.text = tweet.text
-        //print(cell.tweetLabel.text)
-        print(tweet)
-        return cell
-    }*/
+    
 
+    @IBAction func onLogoutButton(_ sender: Any) {
+        User.currentUser = nil
+        TwitterClient.sharedInstance?.logout()
+    }
     /*
     // MARK: - Navigation
 

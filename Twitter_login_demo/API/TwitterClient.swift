@@ -11,6 +11,8 @@ import BDBOAuth1Manager
 
 class TwitterClient: BDBOAuth1SessionManager {
     
+    
+    
     static let sharedInstance = TwitterClient(baseURL: URL(string: "https://api.twitter.com"), consumerKey: "pPWSqAYRw8ZzEUxU1oLCnzv04", consumerSecret: "2lv9eClYqFRq6sWWv88b8s7JltwiNYDZWhwyRERFtypyFdPSXz")
     
     var loginSuccess: (() -> ())?
@@ -31,6 +33,11 @@ class TwitterClient: BDBOAuth1SessionManager {
             self.loginFailure?(error)
         })
         
+    }
+    
+    func logout() {
+        deauthorize()
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: User.userDidLogoutNotification), object: nil)
     }
     
     func handleOpenUrl(url: URL) {
