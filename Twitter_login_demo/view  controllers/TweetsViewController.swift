@@ -18,15 +18,17 @@ class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         tableView.dataSource = self
         tableView.delegate = self
         
+        
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(self.refreshControlAction), for: UIControlEvents.valueChanged)
+        
         TwitterClient.sharedInstance?.homeTimeline(success: { (tweets: [Tweet]) in
             self.tweets = tweets
             self.tableView.reloadData()
-            for tweet in tweets {
-                //print("in the tweets view controller tweet: \(tweet.text)")
-            }
         }, failure: { (error: Error) in
             print(error.localizedDescription)
         })
+        tableView.insertSubview(refreshControl, at: 0)
 
         // Do any additional setup after loading the view.
     }
@@ -60,6 +62,17 @@ class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBAction func onLogoutButton(_ sender: Any) {
         User.currentUser = nil
         TwitterClient.sharedInstance?.logout()
+    }
+    
+    func refreshControlAction(refreshControl: UIRefreshControl) {
+        TwitterClient.sharedInstance?.homeTimeline(success: { (tweets: [Tweet]) in
+            self.tweets = tweets
+            self.tableView.reloadData()
+        }, failure: { (error: Error) in
+            print(error.localizedDescription)
+        })
+        
+        refreshControl.endRefreshing()
     }
     /*
     // MARK: - Navigation
