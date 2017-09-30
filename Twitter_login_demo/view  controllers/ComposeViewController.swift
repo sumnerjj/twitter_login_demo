@@ -23,12 +23,12 @@ class ComposeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     @IBAction func onSendButton(_ sender: Any) {
-        self.tweetBody = composeTextView.text
-        print(self.tweetBody)
-        var paramsDict = NSMutableDictionary()
-        paramsDict["body"] = "qweqwe"
-        print(paramsDict["body"])
-        TwitterClient.sharedInstance?.postNew(params: paramsDict)
+        //self.tweetBody = composeTextView.text
+        //print(self.tweetBody)
+        //var paramsDict = NSMutableDictionary()
+        //paramsDict["body"] = "qweqwe"
+        print(composeTextView.text)
+        TwitterClient.sharedInstance?.postNew(tweetText: composeTextView.text)
         
     }
     @IBOutlet weak var composeTextView: UITextView!
