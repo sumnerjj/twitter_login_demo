@@ -25,6 +25,11 @@ class ComposeViewController: UIViewController {
     @IBAction func onSendButton(_ sender: Any) {
         self.tweetBody = composeTextView.text
         print(self.tweetBody)
+        var paramsDict = NSMutableDictionary()
+        paramsDict["body"] = "qweqwe"
+        print(paramsDict["body"])
+        TwitterClient.sharedInstance?.postNew(params: paramsDict)
+        
     }
     @IBOutlet weak var composeTextView: UITextView!
 
