@@ -43,6 +43,37 @@
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
         </scene>
+        <!--Tweet Detail View Controller-->
+        <scene sceneID="Azz-i2-aFP">
+            <objects>
+                <viewController id="f1e-u3-9VY" customClass="TweetDetailViewController" customModule="Twitter_login_demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="04R-Nm-yD3"/>
+                        <viewControllerLayoutGuide type="bottom" id="5HB-Rg-UV7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TPN-p0-gg2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f4k-Qs-41z">
+                                <rect key="frame" x="166" y="292" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="gZH-WK-XMv"/>
+                    <connections>
+                        <outlet property="statusLabel" destination="f4k-Qs-41z" id="oZo-Ks-CHT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MM5-Ga-VPM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1857" y="-563"/>
+        </scene>
         <!--Tweets View Controller-->
         <scene sceneID="F3P-2K-GqM">
             <objects>
@@ -60,15 +91,15 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TweetCell" rowHeight="102" id="T5w-eb-xmT" customClass="TweetCell" customModule="Twitter_login_demo" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="TweetCell" rowHeight="102" id="T5w-eb-xmT" customClass="TweetCell" customModule="Twitter_login_demo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="102"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="T5w-eb-xmT" id="hPf-At-GEE">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="101.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="101.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wpg-y2-BKg">
-                                                    <rect key="frame" x="8" y="8" width="359" height="20.5"/>
+                                                    <rect key="frame" x="8" y="8" width="326" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -83,6 +114,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="tweetLabel" destination="Wpg-y2-BKg" id="WNO-Ug-aYi"/>
+                                            <segue destination="f1e-u3-9VY" kind="push" id="ktw-pS-sk1"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
