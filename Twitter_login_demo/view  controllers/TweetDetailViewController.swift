@@ -16,6 +16,8 @@ class TweetDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         statusLabel.text = tweet.text
+        print(tweet)
+        print("user: \(String(describing: tweet.user))")
 
         // Do any additional setup after loading the view.
     }

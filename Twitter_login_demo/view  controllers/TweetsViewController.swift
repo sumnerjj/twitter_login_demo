@@ -78,10 +78,10 @@ class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         print("list segue")
         if let cell = sender as? UITableViewCell{
-        let indexPath = tableView.indexPath(for: cell)
-        let tweet = tweets?[(indexPath?.row)!]
-        let detailViewController = segue.destination as! TweetDetailViewController
-        detailViewController.tweet = tweet
+            let indexPath = tableView.indexPath(for: cell)
+            let tweet = tweets?[(indexPath?.row)!]
+            let detailViewController = segue.destination as! TweetDetailViewController
+            detailViewController.tweet = tweet
         }
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
