@@ -11,9 +11,16 @@ import UIKit
 class ComposeViewController: UIViewController {
     
     var tweetBody: String? = ""
+    var replyToId: String = ""
+    var replyUserName: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("compose id: \(replyToId) replyusername: \(replyUserName)")
+        
+        if let replyUserName = replyUserName {
+            composeTextView.text = "@\(replyUserName)"
+        }
 
         // Do any additional setup after loading the view.
     }
@@ -28,7 +35,7 @@ class ComposeViewController: UIViewController {
         //var paramsDict = NSMutableDictionary()
         //paramsDict["body"] = "qweqwe"
         print(composeTextView.text)
-        TwitterClient.sharedInstance?.postNew(tweetText: composeTextView.text)
+        TwitterClient.sharedInstance?.postNew(tweetText: composeTextView.text, replyToId: replyToId)
         
     }
     @IBOutlet weak var composeTextView: UITextView!

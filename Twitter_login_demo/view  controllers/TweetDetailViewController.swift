@@ -46,6 +46,18 @@ class TweetDetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("detail view segue")
+        if let button = sender as? UIButton{
+            let tweetId = self.tweet.id!
+            let tweetUser = self.tweet.user?.screenName
+            print("tweet id: \(tweetId)")
+            let composeViewController = segue.destination as! ComposeViewController
+            composeViewController.replyToId = tweetId
+            composeViewController.replyUserName = tweetUser
+        }
+    }
+    
 
     /*
     // MARK: - Navigation

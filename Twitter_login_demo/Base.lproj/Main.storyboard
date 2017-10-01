@@ -69,6 +69,7 @@
                                 </constraints>
                                 <connections>
                                     <action selector="replyButton:" destination="f1e-u3-9VY" eventType="touchUpInside" id="MkN-2i-Fs5"/>
+                                    <segue destination="h0w-Wf-jqB" kind="push" id="AsA-KI-Bie"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="55p-Xf-cOs">
@@ -115,7 +116,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MM5-Ga-VPM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1856.8" y="-563.56821589205401"/>
+            <point key="canvasLocation" x="2670" y="-621"/>
         </scene>
         <!--Tweets View Controller-->
         <scene sceneID="F3P-2K-GqM">
@@ -248,7 +249,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vs4-GC-HUc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2671" y="118"/>
+            <point key="canvasLocation" x="2670" y="138"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZLP-5N-K2G">
@@ -269,4 +270,7 @@
             <point key="canvasLocation" x="917.60000000000002" y="117.39130434782609"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="zV6-Wh-pC5"/>
+    </inferredMetricsTieBreakers>
 </document>
