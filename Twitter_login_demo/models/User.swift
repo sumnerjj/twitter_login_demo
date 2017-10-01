@@ -23,7 +23,7 @@ class User: NSObject {
         screenName = dictionary["screen_name"] as? String
         let profileUrlString = dictionary["profile_image_url_https"] as? String
         if let profileUrlString = profileUrlString {
-            profileUrl = URL(fileURLWithPath: profileUrlString)
+            profileUrl = URL(string: profileUrlString)
         }
         tagline = dictionary["description"] as? String
         

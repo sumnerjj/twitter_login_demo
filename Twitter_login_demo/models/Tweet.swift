@@ -17,6 +17,7 @@ class Tweet: NSObject {
     var favoritesCount : Int = 0
     var user : User?
     var id : String?
+    var profileUrl : URL?
     
     init(dictionary: NSDictionary) {
         text = dictionary["text"] as? String
@@ -34,13 +35,11 @@ class Tweet: NSObject {
             let seconds = Int(elapsed)
             let hours = seconds / 3600
             timeSince = "\(hours)h"
-            print("elapsed: \(elapsed)")
-            print("elapsed: \(hours)")
-
         }
         
         if let user = dictionary["user"] as? NSDictionary {
             self.user = User(dictionary: user)
+            self.profileUrl = self.user?.profileUrl
         }
         
     }

@@ -12,17 +12,21 @@ class TweetCell: UITableViewCell {
     
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var timeStampLabel: UILabel!
+    @IBOutlet weak var tweetLabel: UILabel!
+    @IBOutlet weak var profileImage: UIImageView!
     var tweet: Tweet! {
         didSet{
             usernameLabel.text = tweet.user!.name
-            let asd = URL(fileURLWithPath: "http://pm1.narvii.com/6531/723ff69e490b5111e2a9faf003b9048369de7a9b_128.jpg")
-            profileImage.setImageWith(asd)
-            
+            print("image url: \(tweet.profileUrl)")
+            profileImage.setImageWith(tweet.profileUrl!)
+            if let imageURL = tweet.user!.profileUrl {
+                profileImage.setImageWith(imageURL)
+                print("image url: \(imageURL)")
+            }
         }
     }
 
-    @IBOutlet weak var tweetLabel: UILabel!
-    @IBOutlet weak var profileImage: UIImageView!
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
