@@ -98,18 +98,43 @@
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="101.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wpg-y2-BKg">
-                                                    <rect key="frame" x="8" y="8" width="326" height="20.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ks5-Md-xxi">
+                                                    <rect key="frame" x="8" y="8" width="70" height="70"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="70" id="Xa1-9M-iJe"/>
+                                                        <constraint firstAttribute="width" constant="70" id="rTX-jJ-JvO"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="751" text="prison by widening our circle of compassion to embrace all living creatures and the whole of nature in its beauty." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UVO-GP-dsZ">
+                                                    <rect key="frame" x="86" y="8" width="225" height="21"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="4h" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zcX-4z-eUb">
+                                                    <rect key="frame" x="319" y="8" width="15" height="14.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" red="0.51107108160621761" green="0.51107108160621761" blue="0.51107108160621761" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="prison by widening our circle of compassion to embrace all living creatures and the whole of nature in its beauty." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wpg-y2-BKg">
+                                                    <rect key="frame" x="86" y="37" width="248" height="62.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Wpg-y2-BKg" secondAttribute="bottom" constant="8" id="AYe-Xm-8oy"/>
-                                                <constraint firstItem="Wpg-y2-BKg" firstAttribute="top" secondItem="hPf-At-GEE" secondAttribute="top" constant="8" id="F4f-vC-wg0"/>
-                                                <constraint firstItem="Wpg-y2-BKg" firstAttribute="leading" secondItem="hPf-At-GEE" secondAttribute="leading" constant="8" id="GHk-d3-Vry"/>
-                                                <constraint firstAttribute="trailing" secondItem="Wpg-y2-BKg" secondAttribute="trailing" constant="8" id="Uvj-zD-fSE"/>
+                                                <constraint firstItem="ks5-Md-xxi" firstAttribute="top" secondItem="hPf-At-GEE" secondAttribute="top" constant="8" id="CNI-62-49y"/>
+                                                <constraint firstItem="UVO-GP-dsZ" firstAttribute="top" secondItem="ks5-Md-xxi" secondAttribute="top" id="K3O-T9-AAw"/>
+                                                <constraint firstItem="ks5-Md-xxi" firstAttribute="leading" secondItem="hPf-At-GEE" secondAttribute="leading" constant="8" id="Pbk-A2-kq9"/>
+                                                <constraint firstAttribute="trailing" secondItem="Wpg-y2-BKg" secondAttribute="trailing" constant="8" id="RtN-fS-oiA"/>
+                                                <constraint firstAttribute="trailing" secondItem="zcX-4z-eUb" secondAttribute="trailing" constant="8" id="U6y-Zf-MNB"/>
+                                                <constraint firstItem="zcX-4z-eUb" firstAttribute="top" secondItem="ks5-Md-xxi" secondAttribute="top" id="c7N-8t-tfS"/>
+                                                <constraint firstItem="UVO-GP-dsZ" firstAttribute="leading" secondItem="ks5-Md-xxi" secondAttribute="trailing" constant="8" id="dxe-ZW-Cok"/>
+                                                <constraint firstItem="zcX-4z-eUb" firstAttribute="leading" secondItem="UVO-GP-dsZ" secondAttribute="trailing" constant="8" id="nZr-yS-7ZK"/>
+                                                <constraint firstItem="Wpg-y2-BKg" firstAttribute="leading" secondItem="UVO-GP-dsZ" secondAttribute="leading" id="o2Z-Iq-167"/>
+                                                <constraint firstItem="Wpg-y2-BKg" firstAttribute="top" secondItem="UVO-GP-dsZ" secondAttribute="bottom" constant="8" id="ycr-Zt-rPq"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
