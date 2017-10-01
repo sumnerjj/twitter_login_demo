@@ -95,5 +95,28 @@ class TwitterClient: BDBOAuth1SessionManager {
         })
         
     }
+    
+    func retweet(tweet: Tweet) {
+        let params = ["id": tweet.id]
+        print("1.1/statuses/retweet/\(tweet.id!).json")
+        post("1.1/statuses/retweet/\(tweet.id!).json", parameters: params, success: { (task: URLSessionDataTask, response: Any?) -> Void in
+            let postedTweetDictionary = response as! NSDictionary
+            print("qwe")
+        }, failure: {(task: URLSessionTask?, error: Error) -> Void in
+            print("error posting: \(error)")
+        })
+        
+    }
+    
+    func favorite(tweet: Tweet) {
+        let params = ["id": tweet.id]
+        post("1.1/favorites/create.json", parameters: params, success: { (task: URLSessionDataTask, response: Any?) -> Void in
+            let postedTweetDictionary = response as! NSDictionary
+            print("qwe")
+        }, failure: {(task: URLSessionTask?, error: Error) -> Void in
+            print("error posting: \(error)")
+        })
+        
+    }
 
 }

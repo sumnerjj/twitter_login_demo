@@ -61,46 +61,55 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d3m-lo-Ggy">
-                                <rect key="frame" x="50" y="100.5" width="24" height="24"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ccc-PT-KdH">
+                                <rect key="frame" x="30" y="100.5" width="24" height="24"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="24" id="683-aB-nWx"/>
-                                    <constraint firstAttribute="width" constant="24" id="BET-I5-PP6"/>
+                                    <constraint firstAttribute="width" constant="24" id="MLZ-Q4-YgL"/>
+                                    <constraint firstAttribute="height" constant="24" id="uq8-39-YMj"/>
                                 </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zVs-Ml-o8l">
-                                <rect key="frame" x="124" y="100" width="24" height="24"/>
+                                <connections>
+                                    <action selector="replyButton:" destination="f1e-u3-9VY" eventType="touchUpInside" id="MkN-2i-Fs5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="55p-Xf-cOs">
+                                <rect key="frame" x="84" y="100" width="24" height="24"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="24" id="6X0-6C-3RI"/>
-                                    <constraint firstAttribute="height" constant="24" id="KHJ-87-YvW"/>
+                                    <constraint firstAttribute="height" constant="24" id="a3Z-G2-SNh"/>
+                                    <constraint firstAttribute="width" constant="24" id="cxo-dp-2q5"/>
                                 </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GZK-Of-7hP">
-                                <rect key="frame" x="198" y="100" width="24" height="24"/>
+                                <connections>
+                                    <action selector="retweetButton:" destination="f1e-u3-9VY" eventType="touchUpInside" id="9yD-6Y-CjC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gpT-Ey-KAe">
+                                <rect key="frame" x="138" y="100" width="24" height="24"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="24" id="oIW-WC-uAp"/>
-                                    <constraint firstAttribute="width" constant="24" id="rC4-HN-vbd"/>
+                                    <constraint firstAttribute="width" constant="24" id="by7-t1-4rg"/>
+                                    <constraint firstAttribute="height" constant="24" id="m9k-no-IGC"/>
                                 </constraints>
-                            </imageView>
+                                <connections>
+                                    <action selector="starButton:" destination="f1e-u3-9VY" eventType="touchUpInside" id="wEb-29-qjv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="55p-Xf-cOs" firstAttribute="top" secondItem="ccc-PT-KdH" secondAttribute="top" id="4Yo-JG-E8o"/>
                             <constraint firstItem="f4k-Qs-41z" firstAttribute="top" secondItem="04R-Nm-yD3" secondAttribute="bottom" constant="8" id="53e-K7-G3E"/>
                             <constraint firstAttribute="trailing" secondItem="f4k-Qs-41z" secondAttribute="trailing" constant="8" id="BhL-3i-Pxf"/>
-                            <constraint firstItem="GZK-Of-7hP" firstAttribute="leading" secondItem="zVs-Ml-o8l" secondAttribute="trailing" constant="50" id="Dcv-jy-hwA"/>
-                            <constraint firstItem="d3m-lo-Ggy" firstAttribute="top" secondItem="f4k-Qs-41z" secondAttribute="bottom" constant="8" id="Hv5-Cf-WxQ"/>
-                            <constraint firstItem="d3m-lo-Ggy" firstAttribute="leading" secondItem="TPN-p0-gg2" secondAttribute="leading" constant="50" id="LvN-fw-R69"/>
+                            <constraint firstItem="ccc-PT-KdH" firstAttribute="top" secondItem="f4k-Qs-41z" secondAttribute="bottom" constant="8" id="Bhb-EA-Pl6"/>
+                            <constraint firstItem="gpT-Ey-KAe" firstAttribute="leading" secondItem="55p-Xf-cOs" secondAttribute="trailing" constant="30" id="DZf-YV-GQs"/>
+                            <constraint firstItem="gpT-Ey-KAe" firstAttribute="top" secondItem="ccc-PT-KdH" secondAttribute="top" id="Ls3-AU-eyA"/>
                             <constraint firstItem="f4k-Qs-41z" firstAttribute="leading" secondItem="TPN-p0-gg2" secondAttribute="leading" constant="8" id="UbF-wB-daZ"/>
-                            <constraint firstItem="zVs-Ml-o8l" firstAttribute="leading" secondItem="d3m-lo-Ggy" secondAttribute="trailing" constant="50" id="fir-wn-ibQ"/>
-                            <constraint firstItem="GZK-Of-7hP" firstAttribute="top" secondItem="d3m-lo-Ggy" secondAttribute="top" id="nWY-qc-NHY"/>
-                            <constraint firstItem="zVs-Ml-o8l" firstAttribute="top" secondItem="d3m-lo-Ggy" secondAttribute="top" id="yTO-gp-BES"/>
+                            <constraint firstItem="ccc-PT-KdH" firstAttribute="leading" secondItem="TPN-p0-gg2" secondAttribute="leading" constant="30" id="b4g-vH-GDd"/>
+                            <constraint firstItem="55p-Xf-cOs" firstAttribute="leading" secondItem="ccc-PT-KdH" secondAttribute="trailing" constant="30" id="pnh-KM-mgm"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="gZH-WK-XMv"/>
                     <connections>
-                        <outlet property="replyIcon" destination="d3m-lo-Ggy" id="CxY-dC-1FM"/>
-                        <outlet property="retweetIcon" destination="zVs-Ml-o8l" id="sSx-Pp-rYE"/>
-                        <outlet property="starIcon" destination="GZK-Of-7hP" id="ksK-4i-pWt"/>
+                        <outlet property="replyIcon" destination="ccc-PT-KdH" id="NUp-Bp-dDM"/>
+                        <outlet property="retweetIcon" destination="55p-Xf-cOs" id="hvF-Zb-wei"/>
+                        <outlet property="starIcon" destination="gpT-Ey-KAe" id="DED-V1-vy1"/>
                         <outlet property="statusLabel" destination="f4k-Qs-41z" id="oZo-Ks-CHT"/>
                     </connections>
                 </viewController>
