@@ -138,7 +138,10 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="profileImage" destination="ks5-Md-xxi" id="CcA-Z3-g4A"/>
+                                            <outlet property="timeStampLabel" destination="zcX-4z-eUb" id="cIf-yf-At6"/>
                                             <outlet property="tweetLabel" destination="Wpg-y2-BKg" id="WNO-Ug-aYi"/>
+                                            <outlet property="usernameLabel" destination="UVO-GP-dsZ" id="y4w-nm-DsS"/>
                                             <segue destination="f1e-u3-9VY" kind="push" id="ktw-pS-sk1"/>
                                         </connections>
                                     </tableViewCell>

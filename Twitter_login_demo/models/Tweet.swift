@@ -12,6 +12,7 @@ class Tweet: NSObject {
     
     var text : String?
     var timeStamp : Date?
+    var timeSince : String?
     var retweetCount : Int = 0
     var favoritesCount : Int = 0
     var user : User?
@@ -27,6 +28,13 @@ class Tweet: NSObject {
             let formatter = DateFormatter()
             formatter.dateFormat = "EEE MMM d HH:mm:ss Z y"
             timeStamp = formatter.date(from: timeStampString)
+            let elapsed = Date().timeIntervalSince(timeStamp!)
+            let seconds = Int(elapsed)
+            let hours = seconds / 3600
+            timeSince = "\(hours)h"
+            print("elapsed: \(elapsed)")
+            print("elapsed: \(hours)")
+
         }
         
         if let user = dictionary["user"] as? NSDictionary {
