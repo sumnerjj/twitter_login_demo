@@ -55,24 +55,58 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f4k-Qs-41z">
-                                <rect key="frame" x="166" y="292" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f4k-Qs-41z">
+                                <rect key="frame" x="8" y="72" width="359" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d3m-lo-Ggy">
+                                <rect key="frame" x="50" y="100.5" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="683-aB-nWx"/>
+                                    <constraint firstAttribute="width" constant="24" id="BET-I5-PP6"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zVs-Ml-o8l">
+                                <rect key="frame" x="124" y="100" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="24" id="6X0-6C-3RI"/>
+                                    <constraint firstAttribute="height" constant="24" id="KHJ-87-YvW"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GZK-Of-7hP">
+                                <rect key="frame" x="198" y="100" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="oIW-WC-uAp"/>
+                                    <constraint firstAttribute="width" constant="24" id="rC4-HN-vbd"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="f4k-Qs-41z" firstAttribute="top" secondItem="04R-Nm-yD3" secondAttribute="bottom" constant="8" id="53e-K7-G3E"/>
+                            <constraint firstAttribute="trailing" secondItem="f4k-Qs-41z" secondAttribute="trailing" constant="8" id="BhL-3i-Pxf"/>
+                            <constraint firstItem="GZK-Of-7hP" firstAttribute="leading" secondItem="zVs-Ml-o8l" secondAttribute="trailing" constant="50" id="Dcv-jy-hwA"/>
+                            <constraint firstItem="d3m-lo-Ggy" firstAttribute="top" secondItem="f4k-Qs-41z" secondAttribute="bottom" constant="8" id="Hv5-Cf-WxQ"/>
+                            <constraint firstItem="d3m-lo-Ggy" firstAttribute="leading" secondItem="TPN-p0-gg2" secondAttribute="leading" constant="50" id="LvN-fw-R69"/>
+                            <constraint firstItem="f4k-Qs-41z" firstAttribute="leading" secondItem="TPN-p0-gg2" secondAttribute="leading" constant="8" id="UbF-wB-daZ"/>
+                            <constraint firstItem="zVs-Ml-o8l" firstAttribute="leading" secondItem="d3m-lo-Ggy" secondAttribute="trailing" constant="50" id="fir-wn-ibQ"/>
+                            <constraint firstItem="GZK-Of-7hP" firstAttribute="top" secondItem="d3m-lo-Ggy" secondAttribute="top" id="nWY-qc-NHY"/>
+                            <constraint firstItem="zVs-Ml-o8l" firstAttribute="top" secondItem="d3m-lo-Ggy" secondAttribute="top" id="yTO-gp-BES"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="gZH-WK-XMv"/>
                     <connections>
+                        <outlet property="replyIcon" destination="d3m-lo-Ggy" id="CxY-dC-1FM"/>
+                        <outlet property="retweetIcon" destination="zVs-Ml-o8l" id="sSx-Pp-rYE"/>
+                        <outlet property="starIcon" destination="GZK-Of-7hP" id="ksK-4i-pWt"/>
                         <outlet property="statusLabel" destination="f4k-Qs-41z" id="oZo-Ks-CHT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MM5-Ga-VPM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1857" y="-563"/>
+            <point key="canvasLocation" x="1856.8" y="-563.56821589205401"/>
         </scene>
         <!--Tweets View Controller-->
         <scene sceneID="F3P-2K-GqM">

@@ -13,7 +13,13 @@ class TweetDetailViewController: UIViewController {
     var tweet: Tweet!
 
     @IBOutlet weak var statusLabel: UILabel!
+    @IBOutlet weak var starIcon: UIImageView!
+    @IBOutlet weak var replyIcon: UIImageView!
+    @IBOutlet weak var retweetIcon: UIImageView!
     override func viewDidLoad() {
+        retweetIcon.image = UIImage(named: "retweet")
+        starIcon.image = UIImage(named: "star")
+        replyIcon.image = UIImage(named: "reply")
         super.viewDidLoad()
         statusLabel.text = tweet.text
         print(tweet)

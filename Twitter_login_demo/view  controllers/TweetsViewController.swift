@@ -54,7 +54,7 @@ class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         cell.tweetLabel.text = tweet.text
         print(cell.tweetLabel.text)
         let imageUrl = URL(fileURLWithPath: "http://pm1.narvii.com/6531/723ff69e490b5111e2a9faf003b9048369de7a9b_128.jpg")
-        cell.profileImage.setImageWith(imageUrl)
+        cell.profileImage.setImageWith(imageUrl as! URL)
         cell.usernameLabel.text = tweet.user?.screenName!
         cell.timeStampLabel.text = tweet.timeSince
         
