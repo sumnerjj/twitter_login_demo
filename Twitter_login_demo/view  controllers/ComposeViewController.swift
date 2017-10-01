@@ -21,6 +21,9 @@ class ComposeViewController: UIViewController {
         if let replyUserName = replyUserName {
             composeTextView.text = "@\(replyUserName)"
         }
+        else {
+            composeTextView.text = "Placeholder"
+        }
 
         // Do any additional setup after loading the view.
     }
