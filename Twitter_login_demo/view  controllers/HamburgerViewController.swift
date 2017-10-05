@@ -8,13 +8,19 @@
 
 import UIKit
 
-class hamburgerViewController: UIViewController {
+class HamburgerViewController: UIViewController {
 
     @IBOutlet weak var menuView: UIView!
     @IBOutlet weak var contentView: UIView!
 
     @IBOutlet weak var leftMarginConstraint: NSLayoutConstraint!
     var originalLeftMargin: CGFloat = 0.0
+    var menuViewController: UIViewController! {
+        didSet {
+            view.layoutIfNeeded()
+            menuView.addSubview(menuViewController.view)
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 

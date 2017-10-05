@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B5C82E4E16AC2B8E5C1A3A35 /* Pods_Twitter_login_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F3410CABE55F937AE735810 /* Pods_Twitter_login_demo.framework */; };
-		C1436CA41F85B57600D955F4 /* hamburgerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1436CA31F85B57600D955F4 /* hamburgerViewController.swift */; };
+		C1436CA41F85B57600D955F4 /* HamburgerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1436CA31F85B57600D955F4 /* HamburgerViewController.swift */; };
 		C1436CA61F85B59E00D955F4 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1436CA51F85B59E00D955F4 /* MenuViewController.swift */; };
 		C1436CA81F85B6C900D955F4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1436CA71F85B6C900D955F4 /* ProfileViewController.swift */; };
 		C1436CAA1F85B6D600D955F4 /* MentionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1436CA91F85B6D600D955F4 /* MentionsViewController.swift */; };
@@ -31,7 +31,7 @@
 		37052BD4911CB361E008A5B2 /* Pods-Twitter_login_demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twitter_login_demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Twitter_login_demo/Pods-Twitter_login_demo.debug.xcconfig"; sourceTree = "<group>"; };
 		47F233A17C275811278400F1 /* Pods-Twitter_login_demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twitter_login_demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Twitter_login_demo/Pods-Twitter_login_demo.release.xcconfig"; sourceTree = "<group>"; };
 		7F3410CABE55F937AE735810 /* Pods_Twitter_login_demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Twitter_login_demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C1436CA31F85B57600D955F4 /* hamburgerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hamburgerViewController.swift; sourceTree = "<group>"; };
+		C1436CA31F85B57600D955F4 /* HamburgerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HamburgerViewController.swift; sourceTree = "<group>"; };
 		C1436CA51F85B59E00D955F4 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		C1436CA71F85B6C900D955F4 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		C1436CA91F85B6D600D955F4 /* MentionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentionsViewController.swift; sourceTree = "<group>"; };
@@ -131,7 +131,7 @@
 				D064386A1F7E019900BD0645 /* TweetsViewController.swift */,
 				C1982E841F7F0FA90091AC46 /* ComposeViewController.swift */,
 				C1A6D9851F805F3200A3586B /* TweetDetailViewController.swift */,
-				C1436CA31F85B57600D955F4 /* hamburgerViewController.swift */,
+				C1436CA31F85B57600D955F4 /* HamburgerViewController.swift */,
 				C1436CA51F85B59E00D955F4 /* MenuViewController.swift */,
 				C1436CA71F85B6C900D955F4 /* ProfileViewController.swift */,
 				C1436CA91F85B6D600D955F4 /* MentionsViewController.swift */,
@@ -287,7 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1436CA41F85B57600D955F4 /* hamburgerViewController.swift in Sources */,
+				C1436CA41F85B57600D955F4 /* HamburgerViewController.swift in Sources */,
 				C1982E851F7F0FA90091AC46 /* ComposeViewController.swift in Sources */,
 				C1436CA81F85B6C900D955F4 /* ProfileViewController.swift in Sources */,
 				C17C60171F7DA89F00C2CAD6 /* User.swift in Sources */,

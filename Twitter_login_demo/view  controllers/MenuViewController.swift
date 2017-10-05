@@ -11,9 +11,9 @@ import UIKit
 class MenuViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
-    private var tweetsNavigationController: TweetsViewController!
-    private var profileNavigationController: ProfileViewController!
-    private var mentionsNavigationController: MentionsViewController!
+    private var tweetsViewController: UIViewController!
+    private var profileViewController: ProfileViewController!
+    private var mentionsViewController: MentionsViewController!
     
     var viewControllers: [UIViewController] = []
 
@@ -21,9 +21,9 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewDidLoad()
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        tweetsNavigationController = storyboard.instantiateViewController(withIdentifier: "TweetsNavigationController") as! TweetsViewController
+        tweetsViewController = storyboard.instantiateViewController(withIdentifier: "TweetsNavigationController")
         
-        viewControllers.append(tweetsNavigationController)
+        viewControllers.append(tweetsViewController)
 
         // Do any additional setup after loading the view.
     }

@@ -254,7 +254,7 @@
         <!--Menu View Controller-->
         <scene sceneID="noU-hX-kTZ">
             <objects>
-                <viewController id="poX-Bp-M1c" customClass="menuViewController" customModule="Twitter_login_demo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MenuViewController" id="poX-Bp-M1c" customClass="MenuViewController" customModule="Twitter_login_demo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Xcj-ak-YEe"/>
                         <viewControllerLayoutGuide type="bottom" id="08b-z2-8Rr"/>
@@ -304,7 +304,7 @@
         <!--Hamburger View Controller-->
         <scene sceneID="svp-r7-eU3">
             <objects>
-                <viewController id="gmm-Ct-VYb" customClass="hamburgerViewController" customModule="Twitter_login_demo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HamburgerViewController" id="gmm-Ct-VYb" customClass="HamburgerViewController" customModule="Twitter_login_demo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vZf-bh-85y"/>
                         <viewControllerLayoutGuide type="bottom" id="azI-xF-7bW"/>
