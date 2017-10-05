@@ -14,6 +14,10 @@ class User: NSObject {
     var screenName : String?
     var profileUrl : URL?
     var tagline: String?
+    var friends: Int?
+    var followers: Int?
+    var tweetCount: Int?
+    
     
     var dictionary: NSDictionary?
     
@@ -21,6 +25,9 @@ class User: NSObject {
         self.dictionary = dictionary
         name = dictionary["name"] as? String
         screenName = dictionary["screen_name"] as? String
+        friends = dictionary["friends_count"] as? Int
+        followers = dictionary["followers_count"] as? Int
+        tweetCount = dictionary["statuses_count"] as? Int
         let profileUrlString = dictionary["profile_image_url_https"] as? String
         if let profileUrlString = profileUrlString {
             profileUrl = URL(string: profileUrlString)
