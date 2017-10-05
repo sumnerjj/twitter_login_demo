@@ -24,8 +24,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             window?.rootViewController = vc
             let hamburgerViewController = window?.rootViewController as! HamburgerViewController
             let menuViewController = storyboard.instantiateViewController(withIdentifier: "MenuViewController") as! MenuViewController
-            hamburgerViewController.menuViewController = menuViewController
             menuViewController.hamburgerViewController = hamburgerViewController
+            hamburgerViewController.menuViewController = menuViewController
+            
         }
         else {
             print("There is no current user")

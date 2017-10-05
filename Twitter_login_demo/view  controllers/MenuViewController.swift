@@ -36,7 +36,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         viewControllers.append(profileViewController)
         viewControllers.append(mentionsViewController)
         
-        
+        hamburgerViewController.contentViewController = tweetsViewController
 
         // Do any additional setup after loading the view.
     }
