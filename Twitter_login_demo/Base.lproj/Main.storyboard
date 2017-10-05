@@ -41,7 +41,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
+            <point key="canvasLocation" x="273" y="351"/>
         </scene>
         <!--Tweet Detail View Controller-->
         <scene sceneID="Azz-i2-aFP">
@@ -251,6 +251,108 @@
             </objects>
             <point key="canvasLocation" x="2670" y="138"/>
         </scene>
+        <!--Menu View Controller-->
+        <scene sceneID="noU-hX-kTZ">
+            <objects>
+                <viewController id="poX-Bp-M1c" customClass="menuViewController" customModule="Twitter_login_demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Xcj-ak-YEe"/>
+                        <viewControllerLayoutGuide type="bottom" id="08b-z2-8Rr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zzc-CQ-ida">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rSD-l7-yIM">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="659"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="menuCell" id="zwa-uq-xMC" customClass="menuCellView" customModule="Twitter_login_demo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zwa-uq-xMC" id="W0f-kL-O1j">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="menu item" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZuS-5f-oPa">
+                                                    <rect key="frame" x="8" y="11" width="81" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="menuCellLabel" destination="ZuS-5f-oPa" id="b8G-47-okp"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="rSD-l7-yIM" id="Xrc-B1-zFu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TCd-Sw-WTz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2" y="-499"/>
+        </scene>
+        <!--Hamburger View Controller-->
+        <scene sceneID="svp-r7-eU3">
+            <objects>
+                <viewController id="gmm-Ct-VYb" customClass="hamburgerViewController" customModule="Twitter_login_demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vZf-bh-85y"/>
+                        <viewControllerLayoutGuide type="bottom" id="azI-xF-7bW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vqC-WT-VnV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JvZ-e8-tHV" userLabel="Menu View">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Xy-0o-6eo" userLabel="Content View">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="nN5-Un-KjY" appends="YES" id="tCS-AS-zrP"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="azI-xF-7bW" firstAttribute="top" secondItem="JvZ-e8-tHV" secondAttribute="bottom" id="9gt-mt-dYC"/>
+                            <constraint firstItem="5Xy-0o-6eo" firstAttribute="leading" secondItem="vqC-WT-VnV" secondAttribute="leading" id="DWy-e4-bM9"/>
+                            <constraint firstAttribute="trailing" secondItem="JvZ-e8-tHV" secondAttribute="trailing" id="Duj-jL-2Dj"/>
+                            <constraint firstItem="5Xy-0o-6eo" firstAttribute="top" secondItem="vqC-WT-VnV" secondAttribute="top" id="HYx-Xa-RxF"/>
+                            <constraint firstItem="JvZ-e8-tHV" firstAttribute="leading" secondItem="vqC-WT-VnV" secondAttribute="leading" id="cx7-tG-zli"/>
+                            <constraint firstItem="JvZ-e8-tHV" firstAttribute="top" secondItem="vqC-WT-VnV" secondAttribute="top" id="eFz-5v-Y0t"/>
+                            <constraint firstItem="azI-xF-7bW" firstAttribute="top" secondItem="5Xy-0o-6eo" secondAttribute="bottom" id="r8a-g6-WUa"/>
+                            <constraint firstItem="5Xy-0o-6eo" firstAttribute="width" secondItem="JvZ-e8-tHV" secondAttribute="width" id="uw1-n8-jsd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="contentView" destination="5Xy-0o-6eo" id="suu-D3-5vh"/>
+                        <outlet property="leftMarginConstraint" destination="DWy-e4-bM9" id="UKY-D7-wQo"/>
+                        <outlet property="menuView" destination="JvZ-e8-tHV" id="eMZ-59-Xf4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DYt-x3-Df8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="nN5-Un-KjY">
+                    <connections>
+                        <action selector="onPanGesture:" destination="gmm-Ct-VYb" id="iqO-eS-fVy"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-703.20000000000005" y="-500.59970014992507"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZLP-5N-K2G">
             <objects>
@@ -267,7 +369,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jzc-zz-LhQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="917.60000000000002" y="117.39130434782609"/>
+            <point key="canvasLocation" x="1191" y="117"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
