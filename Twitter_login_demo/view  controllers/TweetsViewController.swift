@@ -57,7 +57,35 @@ class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         cell.profileImage.setImageWith(tweet.profileUrl!)
         cell.usernameLabel.text = tweet.user?.screenName!
         cell.timeStampLabel.text = tweet.timeSince
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+        cell.profileImage.isUserInteractionEnabled = true
+        cell.profileImage.addGestureRecognizer(tapGestureRecognizer)
         return cell
+    }
+    
+    func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
+    {
+        let tappedImage = tapGestureRecognizer.view as! UIImageView
+        
+        //print("image tapped: \(tappedImage.superview?.superview)")
+        let tapLocation = tapGestureRecognizer.location(in: self.tableView)
+        
+        //using the tapLocation, we retrieve the corresponding indexPath
+        let indexPath = self.tableView.indexPathForRow(at: tapLocation)
+        let tweet = tweets![(indexPath?.row)!] as! Tweet
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let userProfileController = storyboard.instantiateViewController(withIdentifier: "userProfileController") as! ProfileViewController
+        userProfileController.profileUser = tweet.user
+        present(userProfileController, animated: true, completion: nil)
+        print(tweet.user)
+        
+        //finally, we print out the value
+        //print(indexPath)
+        
+        //we could even get the cell from the index, too
+        //let cell = self.tableView.cellForRow(at: indexPath!) as! TweetCell
+        
+        //print(cell.usernameLabel)
     }
     
     
