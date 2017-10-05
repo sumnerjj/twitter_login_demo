@@ -22,8 +22,7 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 120
+        tableView.rowHeight = 120
         self.tableView.reloadData()
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -40,13 +39,13 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 33
+        return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MenuCell") as! MenuCell
         let titles = ["Tweets", "asd", "qwe"]
-        //cell.menuCellLabel.text = titles[indexPath.row]
+        cell.menuCellLabel.text = "qwe"
         return cell
     }
     

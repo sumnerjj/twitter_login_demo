@@ -266,7 +266,19 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Yyq-a5-fIB" id="8ig-EY-FIt">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Civ-PT-RkD">
+                                            <rect key="frame" x="68" y="8" width="42" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="menuCellLabel" destination="Civ-PT-RkD" id="4Hr-4h-NC9"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                     </tableView>
@@ -299,7 +311,7 @@
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="nN5-Un-KjY" appends="YES" id="tCS-AS-zrP"/>
+                                    <outletCollection property="gestureRecognizers" destination="Deb-kd-aBU" appends="YES" id="lE5-3w-ZR4"/>
                                 </connections>
                             </view>
                         </subviews>
@@ -322,9 +334,9 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DYt-x3-Df8" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="nN5-Un-KjY">
+                <panGestureRecognizer minimumNumberOfTouches="1" id="Deb-kd-aBU">
                     <connections>
-                        <action selector="onPanGesture:" destination="gmm-Ct-VYb" id="iqO-eS-fVy"/>
+                        <action selector="onPanGesture:" destination="gmm-Ct-VYb" id="WRH-rH-NIe"/>
                     </connections>
                 </panGestureRecognizer>
             </objects>
