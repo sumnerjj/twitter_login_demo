@@ -11,10 +11,22 @@ import UIKit
 class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var tweets: [Tweet]?
+    var profileUser: User?
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var coverImage: UIImageView!
+    @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var tweetCountLabel: UILabel!
+    @IBOutlet weak var friendsCountLabel: UILabel!
+    @IBOutlet weak var followersCountLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        profileUser = User.currentUser
+        coverImage.setImageWith((profileUser?.coverUrl)!)
+        profileImage.setImageWith((profileUser?.profileUrl)!)
+        followersCountLabel.text = "Followers: \(profileUser!.followers!)"
+        tweetCountLabel.text = "Tweets: \(profileUser!.tweetCount!)"
+        friendsCountLabel.text = "Following: \(profileUser!.friends!)"
         tableView.dataSource = self
         tableView.delegate = self
         

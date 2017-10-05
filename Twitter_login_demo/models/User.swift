@@ -13,6 +13,7 @@ class User: NSObject {
     var name : String?
     var screenName : String?
     var profileUrl : URL?
+    var coverUrl: URL?
     var tagline: String?
     var friends: Int?
     var followers: Int?
@@ -31,6 +32,10 @@ class User: NSObject {
         let profileUrlString = dictionary["profile_image_url_https"] as? String
         if let profileUrlString = profileUrlString {
             profileUrl = URL(string: profileUrlString)
+        }
+        let coverImageUrlString = dictionary["profile_background_image_url_https"] as? String
+        if let coverImageUrlString = coverImageUrlString {
+            coverUrl = URL(string: coverImageUrlString)
         }
         tagline = dictionary["description"] as? String
         
