@@ -25,6 +25,10 @@ class HamburgerViewController: UIViewController {
         didSet {
             view.layoutIfNeeded()
             contentView.addSubview(contentViewController.view)
+            UIView.animate(withDuration: 0.3, animations: {
+                self.leftMarginConstraint.constant = 0
+                self.view.layoutIfNeeded()
+            })
         }
     }
     
