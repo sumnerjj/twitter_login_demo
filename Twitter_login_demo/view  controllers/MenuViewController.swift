@@ -38,9 +38,9 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "menuCell") as! menuCellView
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MenuCell") as! MenuCell
         let titles = ["Tweets", "asd", "qwe"]
-        cell.menuCellLabel.text = titles[indexPath.row]
+        //cell.menuCellLabel.text = titles[indexPath.row]
         return cell
     }
     
