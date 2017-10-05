@@ -12,10 +12,12 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet weak var tableView: UITableView!
     private var tweetsViewController: UIViewController!
-    private var profileViewController: ProfileViewController!
-    private var mentionsViewController: MentionsViewController!
+    private var profileViewController: UIViewController!
+    private var mentionsViewController: UIViewController!
     
     var viewControllers: [UIViewController] = []
+    
+    var hamburgerViewController: HamburgerViewController!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,8 +29,14 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         tweetsViewController = storyboard.instantiateViewController(withIdentifier: "TweetsNavigationController")
+        mentionsViewController = storyboard.instantiateViewController(withIdentifier: "MentionsNavigationController")
+        profileViewController = storyboard.instantiateViewController(withIdentifier: "ProfileNavigationController")
         
         viewControllers.append(tweetsViewController)
+        viewControllers.append(profileViewController)
+        viewControllers.append(mentionsViewController)
+        
+        
 
         // Do any additional setup after loading the view.
     }
@@ -45,8 +53,14 @@ class MenuViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MenuCell") as! MenuCell
         let titles = ["Tweets", "asd", "qwe"]
-        cell.menuCellLabel.text = "qwe"
+        cell.menuCellLabel.text = titles[indexPath.row]
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        hamburgerViewController.contentViewController = viewControllers[indexPath.row]
     }
     
 
