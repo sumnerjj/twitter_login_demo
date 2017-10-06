@@ -76,8 +76,9 @@ class TweetsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let userProfileController = storyboard.instantiateViewController(withIdentifier: "userProfileController") as! ProfileViewController
         userProfileController.profileUser = tweet.user
+        print(userProfileController.profileUser!.screenName)
         present(userProfileController, animated: true, completion: nil)
-        print(tweet.user)
+        print(tweet.user?.screenName)
         
         //finally, we print out the value
         //print(indexPath)

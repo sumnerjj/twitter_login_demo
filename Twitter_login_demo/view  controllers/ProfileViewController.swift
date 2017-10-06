@@ -11,7 +11,7 @@ import UIKit
 class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var tweets: [Tweet]?
-    var profileUser: User?
+    var profileUser = User.currentUser
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var coverImage: UIImageView!
@@ -21,7 +21,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var followersCountLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        profileUser = User.currentUser
+        //profileUser = User.currentUser
         coverImage.setImageWith((profileUser?.coverUrl)!)
         profileImage.setImageWith((profileUser?.profileUrl)!)
         followersCountLabel.text = "Followers: \(profileUser!.followers!)"
